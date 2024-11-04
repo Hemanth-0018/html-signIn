@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Delius+Swash+Caps&family=Lexend+Zetta:wght@100..900&family=Poiret+One&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(90deg, #F3C623 30%, white 70%);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-family: "Poiret One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .Title {
+            color: transparent;
+            font-weight: bold;
+            background: linear-gradient(90deg, #10375c, #eb8317, #00c6fb, #00375c);
+            -webkit-background-clip: text;
+            text-align: center;
+        }
+        .u {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding-bottom: 10px;
+            border: 1px solid #eb8317;
+            border-radius: 15px;
+            max-width: 400px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-family: "Poiret One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        input {
+            padding: 8px;
+            width: 100%;
+            margin: 5px 0px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+        #submit{
+            background-color: white;
+            border: 2px solid transparent;
+            padding: 5px 30px;
+            border-color: #F3C623;
+            border-radius: 20px;
+            font-family: "Dancing Script", serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+            color: #F3C623;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+        #submit:hover{
+            background:#F3C623;
+            color: white; /* Change text color on hover */
+        }
+        .sub {
+            display: flex;
+            justify-content: center;
+            margin-left: -14px;
+            margin-top: 10px;
+        }
+        input:focus{
+            border-color: #eb8317;
+            outline: none;
+            box-shadow: 0 0 5px rgba(235,131,23,0.5);
+        }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .u {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.2rem;
+            }
+            #submit {
+                padding: 10px 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .p {
+                margin: 5%;
+            }
+            .u {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1rem;
+            }
+            #submit {
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="p">
+        <div class="u">
+            <form action="/submit" method="post">
+                <h1 class="Title">Create an account</h1>
+                <label for="Student">Your name</label><br>
+                <input type="text" id="Student" placeholder="Name" name="name"><br>
+                <label for="Admin">Email Address</label><br>
+                <input type="email" id="Admin" placeholder="name@gmail.com" name="email"><br>
+                <label for="Password">Password</label><br>
+                <input type="password" id="Password" placeholder="Password" name="password"><br>
+                <label for="Confirm">Confirm password</label><br>
+                <input type="password" id="Confirm" placeholder="Confirm password" name="confirm_password"><br>
+                <div class="sub">
+                    <input type="submit" id="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
